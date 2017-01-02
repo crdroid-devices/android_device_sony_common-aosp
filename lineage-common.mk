@@ -23,6 +23,9 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 DEVICE_SPECIFIC_DATASERVICES := hardware/sony/dataservices
 USE_DEVICE_SPECIFIC_DATASERVICES := true
 
+# SnapDragon LLVM Compiler
+TARGET_USE_SDCLANG := true
+
 # Lineage Packages
 PRODUCT_PACKAGES += \
     Gello
