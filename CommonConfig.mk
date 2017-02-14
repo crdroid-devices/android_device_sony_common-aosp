@@ -15,7 +15,7 @@
 # Common path
 COMMON_PATH := device/sony/common-aosp
 
-TARGET_BOARD_AUTO := true
+# TARGET_BOARD_AUTO := true
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_NO_BOOTLOADER := true

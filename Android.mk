@@ -81,25 +81,25 @@ MASTER_SIDE_CP_TARGET_LIST := msm8996
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
-audio-hal := hardware/qcom/audio
-display-hal := hardware/qcom/display/msm8994
-gps-hal := hardware/qcom/gps/msm8994
-media-hal := hardware/qcom/media/msm8974
+#audio-hal := hardware/qcom/audio
+#display-hal := hardware/qcom/display/msm8994
+#gps-hal := hardware/qcom/gps/msm8994
+#media-hal := hardware/qcom/media/msm8974
 
-include $(display-hal)/Android.mk
-include $(call all-makefiles-under,$(audio-hal))
-include $(call all-makefiles-under,$(gps-hal))
-include $(call all-makefiles-under,$(media-hal))
+#include $(display-hal)/Android.mk
+#include $(call all-makefiles-under,$(audio-hal))
+#include $(call all-makefiles-under,$(gps-hal))
+#include $(call all-makefiles-under,$(media-hal))
 
-ifeq ($(BOARD_HAVE_BLUETOOTH_QCOM),true)
-ifneq ($(filter rhine,$(PRODUCT_PLATFORM)),)
-  include $(call all-makefiles-under,hardware/qcom/bt/msm8960)
-else
-  include $(call all-makefiles-under,hardware/qcom/bt/msm8992)
-endif
-endif
-ifeq ($(BOARD_WLAN_DEVICE),qcwcn)
-  include $(call all-makefiles-under,hardware/qcom/wlan/qcwcn)
-endif
+#ifeq ($(BOARD_HAVE_BLUETOOTH_QCOM),true)
+#ifneq ($(filter rhine,$(PRODUCT_PLATFORM)),)
+#  include $(call all-makefiles-under,hardware/qcom/bt/msm8960)
+#else
+#  include $(call all-makefiles-under,hardware/qcom/bt/msm8992)
+#endif
+#endif
+#ifeq ($(BOARD_WLAN_DEVICE),qcwcn)
+#  include $(call all-makefiles-under,hardware/qcom/wlan/qcwcn)
+#endif
 
 endif
